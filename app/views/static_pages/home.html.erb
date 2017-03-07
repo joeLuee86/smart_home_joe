@@ -1,14 +1,34 @@
 <div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
+  <h1>Welcome to Joe's SMART HOME</h1>
 
   <h2>
-    This is the home page for the
-    <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
+    This is a funny website developed by Joe, a funny engineer and a father too. :)
   </h2>
 
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
+  <div data-ride="carousel" class="carousel slide" id="carousel-container">
+  	<!-- picture container -->
+  	<div class="carousel-inner">
+  		<div class="item active"><%= image_tag "farm1.jpg" %></div>
+  		<div class="item"><%= image_tag "sheep.jpg" %></div>
+  	</div>
 
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-            'http://rubyonrails.org/' %>
+  	<!-- the carousel indicator -->
+  	<ol class="carousel-indicators">
+  		<li data-slide-to="0" data-target="#carousel-container" class="active"></li>
+  		<li data-slide-to="1" data-target="#carousel-container"></li>
+  	</ol>
+
+  	<!-- left control button -->
+  	<a data-slide="prev" href="#carousel-container" class="left carousel-control">
+  		<span class="glyphicon glyphicon-chevron-left"></span>
+  	</a>
+  	<!-- right control button -->
+  	<a data-slide="next" href="#carousel-container" class="right carousel-control">
+  		<span class="glyphicon glyphicon-chevron-right"></span>
+  	</a>
+  </div>
+
+  <div class="status_bar">
+  	<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  </div>
+</div>

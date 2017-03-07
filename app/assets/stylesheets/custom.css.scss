@@ -2,8 +2,8 @@
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-
 $gray-medium-light: #eaeaea;
+$color-blue: #0000ff;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -15,6 +15,9 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 60px;
+  .status_bar {
+    padding-top: 50px;
+  }
 }
 
 section {
@@ -71,10 +74,6 @@ p {
   letter-spacing: -1px;
   padding-top: 16px;
   font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
 }
 
 header {
@@ -90,10 +89,11 @@ footer {
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
+  font-size: 1.1em;
   a {
-    color: $gray;
+    color: $color-blue;
     &:hover {
-      color: $gray-darker;
+      #color: $gray-darker;
     }
   }
   small {
@@ -209,3 +209,4 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
