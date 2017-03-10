@@ -1,0 +1,33 @@
+<% provide(:title, "SmartWash") %>
+
+<h1>Welcome to Smart Washing System</h1>
+
+<div class="row">
+  <div class="col-md-6 col-sm-6">
+    <%= image_tag "washing.jpg" %>
+  </div>
+  <div class="col-md-6">
+  		<div class="row">
+  			<div class="col-md-4">PERIOD</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-md-2">Start:</div>
+  			<div class="col-md-2">11/March</div>
+  			<div class="col-md-8">11:00</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-md-2">Intervel:</div>
+  			<div class="col-md-2">00:30</div>
+  			<div class="col-md-8">
+  				<div class="row">
+  					<%= link_to "+", signup_path, class: "btn btn-sm btn-primary" %>
+  					<%= link_to "-", signup_path, class: "btn btn-sm bt-primary" %>
+  				</div>
+  			</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-md-2">Current Time:</div>
+  			<div class="col-md-8"><%= Time.now %></div>
+  		</div>
+  </div>
+</div>
