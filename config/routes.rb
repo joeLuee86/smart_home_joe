@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'smart_wash/DashBoard'
+  get     'smart_wash'  => 'smart_wash#index'
 
   root                  'static_pages#home'
   get     'help'        => 'static_pages#help'

@@ -1,0 +1,19 @@
+<% provide(:title, "SmartWash") %>
+
+<h1>Welcome to Smart Washing System</h1>
+
+<div class="row">
+	<div class="col-md-6 col-sm-6">
+	  <%= image_tag "washing.jpg" %>
+	</div>
+	<div class="col-md-6">
+		<h2>Schedule List</h2>
+		<ul class="smart_wash">
+		  <% @smart_wash_schdules.each do |schedule| %>
+		    <%= render @schedules %>
+		  <% end %>
+		</ul>
+  		<%= link_to "Create Schedule", "#", class: "btn btn-md btn-primary" %>
+	</div>
+</div>
+

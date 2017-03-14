@@ -1,0 +1,24 @@
+<li>
+	<div class="row">
+		<div class="col-md-4">PERIOD</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">Start:</div>
+		<div class="col-md-2">11/March</div>
+		<div class="col-md-8">11:00sdfsdf</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">Intervel:</div>
+		<div class="col-md-2">00:30</div>
+		<div class="col-md-8">
+			<div class="row">
+				<%= link_to "+", signup_path, class: "btn btn-sm btn-primary" %>
+				<%= link_to "-", signup_path, class: "btn btn-sm bt-primary" %>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2">Current Time:</div>
+		<div class="col-md-8"><%= Time.now %></div>
+	</div>
+</li>

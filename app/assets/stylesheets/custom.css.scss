@@ -18,6 +18,13 @@ body {
   .status_bar {
     padding-top: 50px;
   }
+
+  a {
+    color: $color-blue;
+    &:hover {
+      #color: $gray-darker;
+    }
+  }
 }
 
 section {
