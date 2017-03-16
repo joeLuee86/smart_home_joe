@@ -20,9 +20,13 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: postgres://yzisglbitnqosm:d11002cda0feeb1ffe04e1c29253d6eccca51b08478e36668dd37a76f368a5f7@ec2-184-72-249-88.compute-1.amazonaws.com:5432/d3cfcqbm6ntkeo
+#   pool: 5
+#   timeout: 5000 
+
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: postgres://yzisglbitnqosm:d11002cda0feeb1ffe04e1c29253d6eccca51b08478e36668dd37a76f368a5f7@ec2-184-72-249-88.compute-1.amazonaws.com:5432/d3cfcqbm6ntkeo
-  pool: 5
-  timeout: 5000 
+  <<: *default
+  database: db/production.sqlite3 
