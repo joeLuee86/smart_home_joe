@@ -13,7 +13,9 @@
 		    <%= render @schedules %>
 		  <% end %>
 		</ul>
-  		<%= link_to "Create Schedule", "#", class: "btn btn-md btn-primary" %>
+  		<%= form_tag 'smart_wash' do |f| %>
+  			<div><%= submit_tag "Create Schedule", class: "btn btn-primary" %></div>
+  		<% end %>
 	</div>
 </div>
 

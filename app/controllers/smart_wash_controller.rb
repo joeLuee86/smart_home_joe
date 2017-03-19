@@ -9,6 +9,16 @@ class SmartWashController < ApplicationController
   def update
   end
 
+  def create
+    @schedule = WashSchedule.new
+    if @schedule.save
+      flash[:info] = "A new schedule was created successfully!"
+    else
+      
+    end
+    render 'index'
+  end
+
   def start
   end
 
