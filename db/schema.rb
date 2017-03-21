@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170314022652) do
+ActiveRecord::Schema.define(version: 20170320065455) do
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 20170314022652) do
     t.string   "channel"
     t.string   "start_time"
     t.string   "interval"
+    t.string   "start_stop"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "washers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "channel"
+    t.string   "start_at"
+    t.string   "intervel"
     t.string   "start_stop"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

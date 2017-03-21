@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'washers/new'
+
   get     'smart_wash'  => 'smart_wash#index'
 
   root                  'static_pages#home'
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
   resources :microposts
   resources :users
   resources :smart_wash
+  resources :washers
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
