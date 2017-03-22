@@ -2,6 +2,8 @@ class WashersController < ApplicationController
   def new
   end
 
+  # GET /washers/1
+  # GET /washers/1.json
   def show
   	@washer = Washer.find(params[:id])
   end
@@ -15,18 +17,18 @@ class WashersController < ApplicationController
     @washer = Washer.new
   end
 
-  # GET /users/1/edit
+  # GET /washers/1/edit
   def edit
     @washer = Washer.find(params[:id])
   end
 
-  # POST /users
-  # POST /users.json
+  # POST /washers
+  # POST /washers.json
   def create
     @washer = Washer.new(washer_params)
 
     if @washer.save
-      #@user.send_activation_email
+      #@washer.send_activation_email
       flash[:info] = "Schedule is created successfully"
       redirect_to washers_path
     else
