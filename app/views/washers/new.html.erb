@@ -17,12 +17,13 @@
 
       <div class="row">
         <div class="col-md-2"><%= f.label :start_at, 'Start_At' %></div>
-        <div class="col-md-10"><%= f.time_select :start_at, class: 'time-select' %></div>
+        <div class="col-md-10"><%= f.select :start_at, (0..23).to_a, class: 'time-select' %></div>
       </div>   
 
       <div class="row">
         <div class="col-md-2"><%= f.label :intervel, 'Interval' %></div>
-        <div class="col-md-10"><%= f.time_select :intervel, class: 'time-select' %></div>
+        <!-- <div class="col-md-10"><%= f.time_select :intervel, :default => {hour: '1', minute: '0'}, minute_step: 15, class: 'time-select' %></div> -->
+        <div class="col-md-10"><%= f.select :intervel, (0..59).to_a, :include_blank => "hours", class: 'time-select' %></div>
       </div>
 
       <div class="row">
