@@ -7,15 +7,24 @@
 
       <%= f.label :name %>
       <%= f.text_field :name, class: 'form-control' %>
-
+      
       <%= f.label :channel %>
-      <%= f.text_field :channel, class: 'form-control' %>
+      <%= f.select :channel, options_for_select(["Channel 1", "Channel 2", "Channel 3"]), class: 'form-control' %>
 
-      <%= f.label :start_at %>
-      <%= f.text_field :start_at, class: 'form-control' %>
+      <div class="row">
+        <div class="col-md-4"><%= f.label :start_at, 'Start_At' %></div>
+        <div class="col-md-8"><%= f.time_select :start_at, class: 'time-select' %></div>
+      </div>   
 
       <%= f.label :interval %>
-      <%= f.text_field :intervel, class: 'form-control' %>
+      <div class="input-group bootstrap-timepicker timepicker">
+        <input id="timepicker1" type="text" class="form-control input-small">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-time"></span>
+      </div>
+<!--       <%= f.date_select :intervel, class: 'time-select' %> -->
+
+      <%= f.label :start_stop, 'Start_Stop' %>
+      <%= f.select :start_stop, options_for_select(["Stop", "Start"]), class: 'form-control' %>
 
       <%= f.submit "Create Schedule", class: "btn btn-primary" %>
     <% end %>

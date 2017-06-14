@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootstrap-timepicker";
+@import "bootstrap-datepicker";
 
 /* mixins, variables, etc. */
 $gray-medium-light: #eaeaea;
@@ -203,6 +205,11 @@ input {
 #session_remember_me {
   width: auto;
   margin-left: 0;
+}
+
+.time-select {
+  width:10%;
+  display: inline;
 }
 
 /* Users index */
