@@ -5,26 +5,31 @@
     <%= form_for(@washer) do |f| %>
       <%= render 'shared/error_msg_washer' %>
 
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
+      <div class="row">
+        <div class="col-md-2"><%= f.label :name %></div>
+        <div class="col-md-10"><%= f.text_field :name, class: 'form-control' %></div>
+      </div>
       
-      <%= f.label :channel %>
-      <%= f.select :channel, options_for_select(["Channel 1", "Channel 2", "Channel 3"]), class: 'form-control' %>
+      <div class="row">
+        <div class="col-md-2"><%= f.label :channel %></div>
+        <div class="col-md-10"><%= f.select :channel, options_for_select(["Channel 1", "Channel 2", "Channel 3"]), class: 'form-control' %></div>
+      </div>
 
       <div class="row">
-        <div class="col-md-4"><%= f.label :start_at, 'Start_At' %></div>
-        <div class="col-md-8"><%= f.time_select :start_at, class: 'time-select' %></div>
+        <div class="col-md-2"><%= f.label :start_at, 'Start_At' %></div>
+        <div class="col-md-10"><%= f.time_select :start_at, class: 'time-select' %></div>
       </div>   
 
-      <%= f.label :interval %>
-      <div class="input-group bootstrap-timepicker timepicker">
-        <input id="timepicker1" type="text" class="form-control input-small">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-time"></span>
+      <div class="row">
+        <div class="col-md-2"><%= f.label :intervel, 'Interval' %></div>
+        <div class="col-md-10"><%= f.time_select :intervel, class: 'time-select' %></div>
       </div>
-<!--       <%= f.date_select :intervel, class: 'time-select' %> -->
 
-      <%= f.label :start_stop, 'Start_Stop' %>
-      <%= f.select :start_stop, options_for_select(["Stop", "Start"]), class: 'form-control' %>
+      <div class="row">
+        <div class="col-md-2"><%= f.label :start_stop, 'Start_Stop' %></div>
+        <div class="col-md-10"><%= f.select :start_stop, options_for_select(["Stop", "Start"]), class: 'form-control' %></div>
+      </div>
+      
 
       <%= f.submit "Create Schedule", class: "btn btn-primary" %>
     <% end %>
