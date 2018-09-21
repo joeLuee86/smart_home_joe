@@ -3,15 +3,17 @@
 <h1>Welcome to Smart Washing System</h1>
 
 <div class="row">
-	<div class="col-md-6 col-sm-6">
+<!-- 	<div class="col-md-6 col-sm-6">
 	  <%= image_tag "washing.jpg" %>
-	</div>
+	</div> -->
 	<div class="col-md-6">
 		<h2>Schedule List</h2>
 		<ul class="smart_wash">
 		  <% @washers.each do |washer| %>
 			<%= render washer %>
+			<li class="divider"></li>
 		  <% end %>
+
 		</ul>	
 
   		<div>
