@@ -1,15 +1,10 @@
-<li>
-	<div class="row">
-		<div class="col-md-6"><%= washer.name %>, <%= washer.channel %></div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">Start: <%= washer.start_at %></div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">Intervel: <%= washer.intervel %></div>
-	</div>
-	<div class="row">
-		<div class="col-md-6">Start/Stop: <%= washer.start_stop %></div>
-	</div>
-	<%= link_to "delete", washer, method: :delete, data: { confirm: "Are you sure?" } %>
-</li>
+<tbody>
+	<tr>
+		<td><%= washer.channel %></td>
+		<td><%= washer.start_at %></td>
+		<td><%= washer.intervel %></td>
+		<td><%= washer.start_stop %></td>
+		<td><%= link_to "edit", washer, method: :edit%></td>
+		<td><%= link_to "delete", washer, method: :delete, data: { confirm: "Are you sure?" } %></td>
+	</tr>
+</tbody>

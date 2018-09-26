@@ -7,19 +7,33 @@
 	  <%= image_tag "washing.jpg" %>
 	</div> -->
 	<div class="col-md-6">
-		<h2>Schedule List</h2>
-		<ul class="smart_wash">
-		  <% @washers.each do |washer| %>
-			<%= render washer %>
-			<li class="divider"></li>
-		  <% end %>
+		<div class="table-washers">
+			<table class="table table-hover table-responsive">
+				<caption>Washer Channels</caption>
+				<thead>
+					<tr>
+						<tr>
+							<th>CHANNEL</th>
+							<th>START </th>
+							<th>INTERVEL </th>
+							<th>START/STOP</th> 
+						</tr>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+					  <% @washers.each do |washer| %>
+						<%= render washer %>
+					  <% end %>
+					</tr>
+				</tbody>
+			</table>
 
-		</ul>	
+	  		<div>
+	  			<%= time_tag(Time.now) %>
+	  		</div>
 
-  		<div>
-  			<%= time_tag(Time.now) %>
-  		</div>
-
-		<%= link_to "Create Schedule", new_washer_path, class: "btn btn-md btn-primary" %>
+			<%= link_to "Create Schedule", new_washer_path, class: "btn btn-md btn-primary" %>
+		</div>
 	</div>
 </div>
